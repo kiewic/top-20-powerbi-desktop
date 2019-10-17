@@ -1,0 +1,27 @@
+Previous Week = 
+var currentDate = 'spotify-charts'[Week]
+return
+CALCULATE(MAX('spotify-charts'[Week]),
+    FILTER(ALL('spotify-charts'),
+        'spotify-charts'[Week] < currentDate
+    )
+)
+
+
+Previous Position = 
+var currentPreviousWeek = 'spotify-charts'[Previous Week]
+var currentURL = 'spotify-charts'[URL]
+var currentCountry = 'spotify-charts'[Country]
+return
+-- Can I remove a single filter? I just want to remove previous date.
+CALCULATE(IF(ISBLANK(MAX('spotify-charts'[Position])),-999, MAX('spotify-charts'[Position])),
+    FILTER(ALL('spotify-charts'),
+        'spotify-charts'[URL] = currentURL
+        && 'spotify-charts'[Week] = currentPreviousWeek
+        && 'spotify-charts'[Country] = currentCountry
+    )
+)
+
+
+Position Change = 'spotify-charts'[Position] - 'spotify-charts'[Previous Position]
+
