@@ -13,7 +13,23 @@
             "fontSize": 30,
             "color": "#B10DC9"
         },
+        "largeTitle": {
+            "fontSize": 30,
+            "color": "#B10DC9"
+        },
         "label": {
+            "fontSize": 30,
+            "color": "#B10DC9"
+        },
+        "semiboldLabel": {
+            "fontSize": 30,
+            "color": "#B10DC9"
+        },
+        "largeLabel": {
+            "fontSize": 30,
+            "color": "#B10DC9"
+        },
+        "smallLabel": {
             "fontSize": 30,
             "color": "#B10DC9"
         }

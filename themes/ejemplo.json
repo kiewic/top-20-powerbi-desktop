@@ -1,0 +1,10 @@
+    {
+        "name": "Custom Theme",
+   	      "textClasses": {
+        		"label": {
+            		"fontSize": 20,
+            		"fontFace": "Segoe UI",
+            		"color": "#252423"
+        		}
+    	}    
+    }
